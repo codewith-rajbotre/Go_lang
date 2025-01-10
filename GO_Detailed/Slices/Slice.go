@@ -14,7 +14,7 @@ func main() {
 	Names = append(Names, "Seeta", "Geeta")
 	fmt.Println(Names)
 
-	Names = append(Names[1:3])
+	//Names = append(Names[1:3])
 	fmt.Println(Names)
 
 	highscore := make([]int, 4)
