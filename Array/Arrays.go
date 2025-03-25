@@ -4,6 +4,10 @@ import "fmt"
 
 func main() {
 	var intArr [3]int32
+	var fruitList [2]string
+	fruitList[0] = "Apple"
+	fruitList[1] = "Orange"
+	fmt.Println(fruitList)
 	fmt.Println(intArr[0])
 	fmt.Println(intArr[1:3])
 
