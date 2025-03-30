@@ -3,22 +3,22 @@ package main
 import "fmt"
 
 func main() {
-	var intArr [3]int32
-	var fruitList [2]string
-	fruitList[0] = "Apple"
-	fruitList[1] = "Orange"
-	fmt.Println(fruitList)
-	fmt.Println(intArr[0])
-	fmt.Println(intArr[1:3])
+	//without Initialization decleration
+	var list1 [5]int
+	list1[0] = 3
+	//Decleration with initialization
+	list2 := [5]int{1, 2, 3, 4, 5}
+	fmt.Println(list2)
+	//Arrays in Golang
 
-	fmt.Println(&intArr[0])
-	fmt.Println(&intArr[1])
-	fmt.Println(&intArr[2])
+	arr := [3]string{"Go", "Java", "Python"}
+	for i, value := range arr {
+		fmt.Println("Index is ", i, "Values is ", value)
+	}
+	arr33 := [5]int{10, 20, 30, 40, 50}
+	slice := arr33[1:4] // [20 30 40]
 
-	intArr2 := [3]int32{1, 2, 3}
-	fmt.Println(intArr2)
-
-	intArr3 := [...]int32{11, 22, 33}
-	fmt.Println(intArr3)
+	fmt.Println("Array Length:", len(arr33), "Capacity:", cap(arr33)) // Output: Length: 5 Capacity: 5
+	fmt.Println("Slice Length:", len(slice), "Capacity:", cap(slice)) // Output: Length: 3 Capacity: 4
 
 }
