@@ -39,8 +39,8 @@ func main() {
 	r := mux.NewRouter()
 
 	//seeding Adding data
-	courses = append(courses, Course{CourseId: "2", CourseName: "ReactJS", CoursePrice: 299, Author: &Author{Fullname: "Hitesh Choudhary", Website: "lco.dev"}})
-	courses = append(courses, Course{CourseId: "4", CourseName: "MERN Stack", CoursePrice: 199, Author: &Author{Fullname: "Hitesh Choudhary", Website: "go.dev"}})
+	courses = append(courses, Course{CourseId: "2", CourseName: "ReactJS", CoursePrice: 299, Author: &Author{Fullname: "Mandar Bansode", Website: "abv.in"}})
+	courses = append(courses, Course{CourseId: "4", CourseName: "MERN Stack", CoursePrice: 199, Author: &Author{Fullname: "Ajay Kulkarni", Website: "abc.in"}})
 
 	//routing
 	r.HandleFunc("/", serveHome).Methods("GET")

@@ -9,3 +9,9 @@ type Netflix struct {
 	Movie   string             `json:"movie,omitempty"`
 	Watched bool               `json:"watched,omitempty"`
 }
+
+//Notes :
+// ✅ json:"_id,omitempty" ensures JSON serialization compatibility.
+// ✅ bson:"_id,omitempty" ensures MongoDB stores the field as _id.
+// ✅ omitempty prevents empty values from appearing in JSON/BSON output.
+// ✅ MongoDB automatically generates an _id if none is provided.

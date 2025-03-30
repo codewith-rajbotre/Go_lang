@@ -27,6 +27,12 @@ func EncodeJSON() {
 	}
 	//Package this data as a JSON data
 	fileJSON, err := json.MarshalIndent(courses, "", "\t")
+
+	// ✅ json.Marshal() or json.MarshalIndent converts Go structs, maps, or slices into JSON.
+	// ✅ omitempty removes empty fields.
+	// ✅ json.MarshalIndent() pretty-prints JSON.
+	// ✅ Always handle errors when marshaling
+
 	if err != nil {
 		panic(err)
 	}
