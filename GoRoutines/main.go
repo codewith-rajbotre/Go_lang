@@ -25,13 +25,15 @@ func main() {
 
 	for _, web := range websitelist {
 		go getStatusCode(web)
-		waitGroup.Add(1)
+		waitGroup.Add(1) // Increment counter
 	}
-	// go greeter("Hello")
-	// greeter("world")
-	waitGroup.Wait()
+
+	waitGroup.Wait() // Wait for all goroutines to complete
 
 	fmt.Println(signals)
+
+	// go greeter("Hello")
+	// greeter("world")
 }
 
 // func greeter(s string) {
@@ -42,7 +44,7 @@ func main() {
 // }
 
 func getStatusCode(endpoint string) {
-	defer waitGroup.Done()
+	defer waitGroup.Done() // Mark goroutine as done when it completes
 	res, err := http.Get(endpoint)
 
 	if err != nil {
