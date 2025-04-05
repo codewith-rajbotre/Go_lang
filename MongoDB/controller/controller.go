@@ -35,10 +35,9 @@ func init() {
 		log.Fatal(err)
 	}
 	fmt.Println("MongoDB connection success")
-
+	//collection instance
 	collection = client.Database(dbName).Collection(colName)
 
-	//collection instance
 	fmt.Println("Collection instance is ready")
 }
 
