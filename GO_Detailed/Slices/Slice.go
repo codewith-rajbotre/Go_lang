@@ -31,4 +31,7 @@ func main() {
 	fmt.Println(highscore)
 	fmt.Println(sort.IntsAreSorted(highscore))
 
+	var data = []int{78, 67, 54}
+	fmt.Println(data)
+
 }
