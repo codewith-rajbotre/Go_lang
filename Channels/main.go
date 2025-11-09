@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	BufferdChannels()
 	//fmt.Println("Channels in Golang")
 
 	myCh := make(chan int, 1) //second parameter is buffer -Number of channels

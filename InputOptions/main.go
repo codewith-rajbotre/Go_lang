@@ -10,10 +10,10 @@ func main() {
 	//Method : 1
 	//Disadvantage :  reads input until space or newline
 
-	// var name string
-	// fmt.Println("Enter the string")
-	// fmt.Scanln(&name)
-	// fmt.Println("Name : ", name)
+	var name string
+	fmt.Println("Enter the string")
+	fmt.Scanln(&name)
+	fmt.Println("Name : ", name)
 
 	//Method : 2
 
